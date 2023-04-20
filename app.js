@@ -13,7 +13,7 @@ var addButton=document.getElementsByTagName("button")[0];//first button
 var incompleteTaskHolder=document.getElementById("incomplete-tasks");//ul of #incompleteTasks
 var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
 
-document.querySelector(".top-section-label").addEventListener('click', () => {
+document.querySelector(".top-section__heading").addEventListener('click', () => {
 	document.querySelector(".task_new").focus();
 })
 
@@ -45,9 +45,9 @@ var createNewTaskElement=function(taskString){
   editInput.className="task";
 
   editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-  editButton.className="edit";
+  editButton.className="button edit";
 
-  deleteButton.className="delete";
+  deleteButton.className="button delete";
   deleteButtonImg.src="./remove.svg";
 	deleteButtonImg.alt = "Button to delete list item";
   deleteButton.appendChild(deleteButtonImg);
